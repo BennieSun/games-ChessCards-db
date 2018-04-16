@@ -234,8 +234,8 @@ BEGIN
 			END
 
 			-- 更新微信的昵称
-			-- IF @cbPlatformID=5
-			ELSE
+			IF @cbPlatformID=5
+			-- ELSE
 			BEGIN
 				SET @NickName=@strTempName
 				UPDATE AccountsInfo SET NickName=@strTempName WHERE UserID=@UserID
