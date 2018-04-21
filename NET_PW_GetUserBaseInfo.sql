@@ -31,6 +31,9 @@ DECLARE @Nullity BIT
 DECLARE @StunDown BIT
 DECLARE @AgentID INT
 
+-- 第三方ID
+DECLARE @UserUin nvarchar(32)
+
 -- 执行逻辑
 BEGIN
 	-- 用户资料
@@ -44,7 +47,8 @@ BEGIN
 		@UserRight=UserRight,
 		@Nullity=Nullity,
 		@StunDown=StunDown,
-		@AgentID=AgentID
+		@AgentID=AgentID,
+		@UserUin=UserUin
 	FROM AccountsInfo (NOLOCK) WHERE UserID=@dwUserID
 	
 	-- 查询用户
@@ -77,7 +81,8 @@ BEGIN
 			@UnderWrite AS UnderWrite,
 			@UserRight AS UserRight,
 			@UserMedal AS UserMedal,
-			@AgentID AS AgentID
+			@AgentID AS AgentID,
+			@UserUin AS UserUin
 END
 
 RETURN 0
