@@ -11,7 +11,7 @@ GO
 ----------------------------------------------------------------------
 
 CREATE PROCEDURE WSP_PM_GrantTreasure
-	@MasterID INT,				-- 管理员标识
+	@MasterID BIGINT,				-- 管理员标识
 	@ClientIP VARCHAR(15),		-- 赠送地址
 	@UserID INT,				-- 用户标识
 	@AddGold BIGINT,			-- 赠送金币
