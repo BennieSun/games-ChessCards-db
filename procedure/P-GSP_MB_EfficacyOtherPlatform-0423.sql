@@ -3,6 +3,10 @@ GO
 SET ANSI_NULLS, QUOTED_IDENTIFIER ON
 GO
 
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[GSP_MB_EfficacyOtherPlatform]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+-- 删除存储过程
+drop procedure [dbo].[GSP_MB_EfficacyOtherPlatform]
+GO
 ----------------------------------------------------------------------------------------------------
 
 -- 第三方登录

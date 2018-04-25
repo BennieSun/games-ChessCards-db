@@ -3,6 +3,10 @@ GO
 SET ANSI_NULLS, QUOTED_IDENTIFIER ON
 GO
 
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[NET_PW_GetUserBaseInfo]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+-- 删除存储过程
+drop procedure [dbo].[NET_PW_GetUserBaseInfo]
+GO
 ----------------------------------------------------------------------------------------------------
 
 -- 获取用户基本资料

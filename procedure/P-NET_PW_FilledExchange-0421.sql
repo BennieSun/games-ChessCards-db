@@ -3,6 +3,11 @@ GO
 SET ANSI_NULLS, QUOTED_IDENTIFIER ON
 GO
 
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[NET_PW_FilledExchange]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+-- É¾³ý´æ´¢¹ý³Ì
+drop procedure [dbo].[NET_PW_FilledExchange]
+GO
+
 ---------------------------------------------------------------------------------------
 -- ¶Ò»»³äÖµ
 CREATE PROCEDURE NET_PW_FilledExchange
